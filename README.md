@@ -1,3 +1,7 @@
+*Unfortunately, I ran into multiple timeblocks throughout the project and at the very end, ran into multiple issues that I did not have the time to resolve. As a result, the project does not compile.
+
+I was unable to complete the video and the testing functions along with this.*
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/pAwGQi_N)
 
 # PA4 Skeleton Code

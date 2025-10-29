@@ -10,34 +10,31 @@
  *              Amazon inventory. A user can find if a product exists, or      *
  *              products in a specific category.                               *
  *                                                                             *
- * File:        main.cpp                                                       *
- * Description: Main file used for calling function commands and building      *
- *              / running the program.                                         *
+ * File:        InventoryWrapper.hpp                                           *
+ * Description: This is the header file for the inventory application. It      *
+ *              holds function declarations for displaying/validating commands *
+ *              and their actions, as well as the initialization of the        *
+ *              program.                                                       *
  ******************************************************************************/
 
-#include "InventoryWrapper.hpp"
-#include <iostream>
-#include <string>
+ #pragma once // Guard code
 
-using namespace std;
+ #include <iostream>
+ #include <string>
+ #include "HashLinkedList.hpp"
 
-InventoryWrapper program;
+ using namespace std;
 
-int main(int argc, char const *argv[])
-{
-    string line;
-    program.bootStrap();
-    while (getline(cin, line) && line != ":quit")
-    {
-        if (program.validCommand(line))
-        {
-            program.evalCommand(line);
-        }
-        else
-        {
-            cout << "Command not supported. Enter :help for list of supported commands" << endl;
-        }
-        cout << "> ";
-    }
-    return 0;
-}
+ class InventoryWrapper
+ {
+    public:
+        // Constructor for the wrapper
+        InventoryWrapper();
+
+        void printHelp(); // Prints out the supported list of commands
+        bool validCommand(string line); // Makes sure a user-entered command is valid
+        void evalCommand(string line); // Chooses what to do based on an entered command
+        void bootStrap(); // Bootstrap operations
+    private:
+        HashLinkedList::HashLinkedList<T>* hashTable[4064];
+ };
